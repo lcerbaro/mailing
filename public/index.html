@@ -1,0 +1,43 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js" ></script>
+		<script type="text/javascript">
+
+			$(function() {
+				$("#janelaJ").click(function() {
+					var windowSizeArray = [ "width=200,height=200",
+                                    "width=200,height=200,scrollbars=yes,addressbar=no" ];
+					window.open(undefined, "Janela Teste", windowSizeArray);
+				});
+			});
+
+		setInterval(function() {
+			$("#dataAtual").val(new Date());
+		}, 1000);
+
+		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	</head>
+	<body>
+		<div>
+		</div>
+		<div id="head"></div>
+		<div id="body">
+			<form method="POST">
+				<input type="text" id="dataAtual" disabled="disabled" value="Data" />
+				<input type="button" id="janelaJ" value="JanelaJ" />
+				<input type="button" id="redimensionar" value="Redimensionar" />
+				<input type="button" id="avancar" value="Avançar" />
+				<input type="button" id="inicio" value="Início" />
+				<input type="button" id="imprimir" value="Imprimir" />
+			</form>
+		</div>
+		<div id="foot"></div>
+	</body>
+</html>
